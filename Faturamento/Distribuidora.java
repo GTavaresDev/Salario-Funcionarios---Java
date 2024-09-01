@@ -50,16 +50,17 @@ public class Distribuidora {
           String nome = dados.nextLine();
           System.out.println("Faturamento: ");
           double faturamento = dados.nextDouble();
-          dados.nextLine();
+
 
           Relatorio relatorio = new Relatorio(nome, faturamento);
           relatorio.faturamento(faturamento);
           somaTotal += relatorio.getFaturamento(); 
           System.out.println(relatorio);
+          dados.nextLine();
         }
         
        
-        System.out.println("Faturamento Total: " + somaTotal);
+        System.out.println("Faturamento Total: R$%f" , somaTotal);
 
         dados.close();
     }
